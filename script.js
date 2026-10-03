@@ -363,7 +363,7 @@ console.log('💍 Sreejith & Aiswarya Wedding Website Loaded');
 // ─── RSVP FORM ───────────────────────────────────────────────
 (function initRSVP() {
   // ── Set SCRIPT_URL below to your own Apps Script deployment ──
-  const SCRIPT_URL  = '';   // paste your own Google Apps Script web-app URL here to collect RSVPs in a Google Sheet
+  const SCRIPT_URL  = 'https://script.google.com/macros/s/AKfycbzOJAxs8H6ahLbeEEtFnBPsyRKZk6JoQN2r-DSKTDt50BXN3TENXD_LW_Gjum9qlJgV/exec';
   const STORAGE_KEY = 'sreejith_aiswarya_rsvp';
 
   const rsvpForm    = document.getElementById('rsvp-form');

@@ -400,8 +400,97 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ RSVP SECTION ═══════════════════ -->
+  <section class="rsvp-section" id="rsvp">
+    <div class="section-header">
+      <p class="section-tag">Your Presence Matters</p>
+      <h2 class="section-title">RSVP</h2>
+      <div class="divider-line"><span></span><span class="diamond">◆</span><span></span></div>
+      <p class="rsvp-tagline">Kindly confirm your attendance by 10th November 2026</p>
+    </div>
+
+    <div class="rsvp-card">
+      <!-- Corner decorations matching inv-card -->
+      <div class="inv-corner inv-corner-tl"></div>
+      <div class="inv-corner inv-corner-tr"></div>
+      <div class="inv-corner inv-corner-bl"></div>
+      <div class="inv-corner inv-corner-br"></div>
+
+      <!-- ── Form ── -->
+      <form id="rsvp-form" class="rsvp-form" novalidate>
+
+        <!-- Attendance toggle -->
+        <div class="rsvp-attendance-group">
+          <p class="rsvp-attendance-label">Will you be joining us?</p>
+          <div class="rsvp-radio-row">
+            <label class="rsvp-radio-card" for="attend-yes">
+              <input type="radio" id="attend-yes" name="attendance" value="Yes, I will be there" />
+              <span class="rsvp-radio-icon">🎉</span>
+              <span class="rsvp-radio-text">Joyfully Accept</span>
+            </label>
+            <label class="rsvp-radio-card" for="attend-no">
+              <input type="radio" id="attend-no" name="attendance" value="Sorry, I can't attend" />
+              <span class="rsvp-radio-icon">🙏</span>
+              <span class="rsvp-radio-text">Regretfully Decline</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Name -->
+        <div class="rsvp-field">
+          <label for="rsvp-name">Full Name <span class="req">*</span></label>
+          <input type="text" id="rsvp-name" name="name" placeholder="Your full name" required />
+        </div>
+
+        <!-- Mobile -->
+        <div class="rsvp-field">
+          <label for="rsvp-mobile">Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="rsvp-mobile" name="mobile" placeholder="+91 XXXXX XXXXX" required />
+        </div>
+
+        <!-- Guest count (shown only when attending yes) -->
+        <div class="rsvp-field" id="guests-group" style="display:none;">
+          <label for="rsvp-guests">Number of Guests (including yourself) <span class="req">*</span></label>
+          <select id="rsvp-guests" name="guests">
+            <option value="1">1 Person</option>
+            <option value="2">2 Persons</option>
+            <option value="3">3 Persons</option>
+            <option value="4">4 Persons</option>
+            <option value="5">5 Persons</option>
+            <option value="6+">6+ Persons</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div class="rsvp-field">
+          <label for="rsvp-message">Message for the Couple</label>
+          <textarea id="rsvp-message" name="message" rows="3"
+            placeholder="Your blessings, wishes or any note…"></textarea>
+        </div>
+
+        <button type="submit" class="rsvp-submit-btn" id="rsvpSubmitBtn">
+          <span>Send RSVP</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+
+      <!-- ── Success state ── -->
+      <div id="rsvp-success" class="rsvp-success" style="display:none;">
+        <div class="rsvp-success__icon">💐</div>
+        <h3 class="rsvp-success__title">Thank You!</h3>
+        <p class="rsvp-success__text"></p>
+        <p class="rsvp-success__names">Sreejith &amp; Aiswarya</p>
+        <button id="edit-rsvp-btn" class="rsvp-edit-btn">Edit Response</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ FOOTER ═══════════════════ -->
   <footer class="footer" id="footer">
+
     <div class="footer-floral footer-floral-l">
       <svg width="120" height="200" viewBox="0 0 120 200" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
